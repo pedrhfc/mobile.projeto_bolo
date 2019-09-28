@@ -1,9 +1,4 @@
-import {
-  Directive,
-  Renderer2,
-  ElementRef,
-  OnInit
-} from "@angular/core";
+import { Directive, Renderer2, ElementRef, OnInit } from "@angular/core";
 import { Bolos } from "../models/bolos";
 import { BolosService } from "../services/bolos.service";
 import { ActivatedRoute } from "@angular/router";
@@ -79,7 +74,6 @@ export class CarrinhoDirective implements OnInit {
         this.renderer.appendChild(this.el.nativeElement, cardInput);
         const buttonConfirmar = this.renderer.createElement("ion-button");
         this.renderer.setProperty(buttonConfirmar, "expand", "block");
-        this.renderer.setProperty(buttonConfirmar, "(click)", "click()");
         const buttonText = this.renderer.createText("Confirmar Pedido");
         this.renderer.appendChild(buttonConfirmar, buttonText);
         this.renderer.appendChild(this.el.nativeElement, buttonConfirmar);
@@ -97,12 +91,11 @@ export class CarrinhoDirective implements OnInit {
       message: "Confirmando Pedido...",
       translucent: true,
       cssClass: "custom-class custom-loading"
-      
     });
 
     setTimeout(() => {
       this.navCtrl.navigateRoot("home");
-    },4000);
+    }, 4000);
     return await loading.present();
   }
 }
