@@ -1,11 +1,13 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title color = primary>Canelés</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="ion-padding">
-    <ion-img src="../assets/img/caneles.jpg"></ion-img>
-  </div>
-</ion-content>
+    <ion-toolbar>
+      <ion-title color = primary>{{bolo}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="ion-padding">
+      <ion-img [src]="url"></ion-img>
+      <p>{{descricao}}</p><br>
+      <ion-button expand=block routerLink="/carrinho" (click) = 'boloId($event)' id='caneles'>Comprar já.</ion-button>
+    </div>
+  </ion-content>

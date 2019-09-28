@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { Router } from '@angular/router';
 import { BolosService } from '../services/bolos.service';
 import { Bolos } from '../models/bolos';
 

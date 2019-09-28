@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-profiteroles",
@@ -11,5 +12,9 @@ export class ProfiterolesPage {
   public descricao =
     "The French pastries are full to bursting with cream and drenched in sweet chocolate sauce." + 
     "They work perfectly as an indulgent dinner party finale or as a sweet gift to your Valentine.";
-  constructor() {}
+    constructor(public router: Router) {}
+
+    public boloId(event){
+      this.router.navigateByUrl('carrinho/'+event.target.id);
+    }
 }

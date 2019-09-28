@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { CarrinhoPage } from './carrinho.page';
+import { CarrinhoDirective } from '../directives/carrinho.directive'
+
 
 const routes: Routes = [
   {
@@ -21,6 +23,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CarrinhoPage]
+  declarations: [CarrinhoPage, CarrinhoDirective]
 })
 export class CarrinhoPageModule {}

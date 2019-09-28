@@ -7,6 +7,7 @@
   <ion-content>
     <div class="ion-padding">
       <ion-img [src]="url"></ion-img>
-      <p>{{descricao}}</p>
+      <p>{{descricao}}</p><br>
+      <ion-button expand=block routerLink="/carrinho" (click) = 'boloId($event)' id='mille_feuille'>Comprar já.</ion-button>
     </div>
   </ion-content>

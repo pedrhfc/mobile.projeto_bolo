@@ -3,4 +3,5 @@ export class Bolos{
     nome: string;
     preco: number;
     url: string;
+    descricao: string;
 }
